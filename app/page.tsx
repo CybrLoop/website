@@ -127,7 +127,7 @@ export default function Home() {
 
         <section id="approach" className="scroll-mt-24 border-y border-slate/60 py-24 sm:py-32 lg:pb-32 lg:pt-24">
           <SectionContainer>
-            <SectionHeading label="03 / How We Work" title="A structured path from context to improvement." description="Understand → Assess → Prioritize → Collaborate → Improve." />
+            <SectionHeading label="03 / How We Work" title="A structured path from context to improvement."  />
             <ol className="mt-16 grid gap-0 lg:grid-cols-5">
               {approach.map((step, index) => (
                 <li key={step.title} className="relative border-l border-slate py-7 pl-10 pr-5 lg:border-l-0 lg:border-t lg:px-4 lg:pb-0 lg:pt-10">
