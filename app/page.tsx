@@ -194,7 +194,7 @@ export default function Home() {
             <p className="mt-7 max-w-2xl text-lg leading-8 text-cloud/95 sm:text-xl">Let&apos;s talk. We&apos;ll start with your application, your context, and what your team needs to understand.</p>
             <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center">
               <ActionLink href="mailto:contact@cybrloop.com">Start a Conversation</ActionLink>
-              <a href="mailto:contact@cybrloop.com" className="link-underline w-fit text-lg text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-orange focus-visible:ring-offset-4 focus-visible:ring-offset-deep-black">contact@cybrloop.com</a>
+              <a href="mailto:contact@cybrloop.com" className="link-underline inline-flex min-h-11 w-fit items-center text-lg text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-orange focus-visible:ring-offset-4 focus-visible:ring-offset-deep-black">contact@cybrloop.com</a>
             </div>
           </SectionContainer>
         </section>

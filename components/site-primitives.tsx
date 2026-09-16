@@ -29,7 +29,7 @@ export function ActionLink({ children, href, variant = "primary" }: { children: 
     : "border-slate/90 bg-transparent text-white hover:border-cloud hover:bg-charcoal";
 
   return (
-    <a href={href} className={`group inline-flex min-h-12 w-full items-center justify-center gap-6 border px-6 py-3 text-center text-[0.9375rem] font-semibold tracking-[-0.01em] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-orange focus-visible:ring-offset-4 focus-visible:ring-offset-deep-black sm:w-auto ${styles}`}>
+    <a href={href} className={`group inline-flex min-h-12 w-full items-center justify-center gap-4 border px-4 py-3 text-center text-sm font-semibold tracking-[-0.01em] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-orange focus-visible:ring-offset-4 focus-visible:ring-offset-deep-black min-[360px]:gap-6 min-[360px]:px-6 min-[360px]:text-[0.9375rem] sm:w-auto ${styles}`}>
       <span>{children}</span>
       <span className="transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">→</span>
     </a>
