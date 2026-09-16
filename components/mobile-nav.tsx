@@ -52,7 +52,7 @@ export function MobileNav({ items }: { items: readonly NavigationItem[] }) {
                     ref={index === 0 ? firstLinkRef : undefined}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="flex min-h-12 items-center justify-between py-3 text-sm font-medium text-cloud transition-colors hover:text-white focus-visible:outline-none focus-visible:text-signal-orange"
+                    className="flex min-h-12 items-center justify-between py-3 text-[0.9375rem] font-medium text-cloud/90 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-signal-orange"
                   >
                     {item.label}<span className="text-signal-orange" aria-hidden="true">→</span>
                   </a>
