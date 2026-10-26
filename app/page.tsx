@@ -4,32 +4,20 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { TechnicalBackdrop } from "@/components/technical-backdrop";
 
-const capabilities = [
-  { index: "01", title: "Security Assessments", description: "Structured assessment of applications, workflows, roles, APIs, and security controls." },
-  { index: "02", title: "Risk Prioritization", description: "Focus on real-world impact rather than vulnerability count." },
-  { index: "03", title: "Developer Collaboration", description: "Communicate findings clearly and work with technical teams toward remediation." },
+const workstreams = [
+  { index: "01", title: "Services", description: "Specialized security services focused on helping organizations identify risks, understand their impact, and improve security." },
+  { index: "02", title: "Research & Projects", description: "Researching security problems, developing tools, and working on technical projects that offer practical value." },
+  { index: "03", title: "Community & Education", description: "Sharing knowledge through talks, workshops, technical content, and collaboration with the cybersecurity community." },
+  { index: "04", title: "Competitions & Challenges", description: "Participating in CTFs and technical challenges to build practical skills, exchange experience, and explore new approaches." },
 ] as const;
 
 const approach = [
-  { title: "Understand", description: "Learn the application, architecture, workflows, roles, and business context." },
-  { title: "Assess", description: "Perform structured security testing within an agreed scope." },
-  { title: "Prioritize", description: "Evaluate findings based on technical and business impact." },
-  { title: "Collaborate", description: "Explain findings and work with the development team." },
-  { title: "Improve", description: "Support the team in turning security findings into real improvements." },
+  { title: "Understand", description: "Identify real problems and understand their context." },
+  { title: "Collaborate", description: "Bring different skills and perspectives together." },
+  { title: "Build", description: "Develop, test, and improve practical solutions." },
+  { title: "Share", description: "Make useful knowledge and results available to others." },
+  { title: "Improve", description: "Learn from experience and use it to do better work." },
 ] as const;
-
-const deliverables = [
-  "Security findings",
-  "Severity and risk prioritization",
-  "Reproduction evidence",
-  "Technical impact explanation",
-  "Remediation guidance",
-  "Final assessment report",
-  "Findings discussion",
-  "Retesting when included in the engagement",
-] as const;
-
-const communityAreas = ["Research", "Tools", "Writeups", "Talks", "Projects", "Competitions"] as const;
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -40,8 +28,7 @@ const structuredData = {
       name: "CybrLoop",
       url: "https://cybrloop.com",
       logo: "https://cybrloop.com/assets/icon-512.png",
-      email: "contact@cybrloop.com",
-      description: "Application Security for Product Teams.",
+      description: "CybrLoop is a cybersecurity team working to improve digital security through technical projects, research, knowledge sharing, and specialized security services.",
       sameAs: ["https://github.com/CybrLoop", "https://www.linkedin.com/company/cybrloop"],
     },
     {
@@ -68,16 +55,16 @@ export default function Home() {
           <TechnicalBackdrop />
           <SectionContainer className="relative z-10 grid items-center gap-10 py-20 sm:gap-14 sm:py-24 lg:grid-cols-[minmax(0,1.15fr)_minmax(22rem,.85fr)] lg:gap-10 lg:py-12 xl:py-14">
             <div className="hero-copy max-w-3xl">
-              <TechnicalLabel>Application Security for Product Teams</TechnicalLabel>
+              <TechnicalLabel>CYBERSECURITY TEAM</TechnicalLabel>
               <h1 className="mt-6 max-w-[12ch] text-balance text-[clamp(3.65rem,10vw,7.5rem)] font-semibold leading-[0.88] tracking-[-0.065em] text-white">
                 Secure the <span className="text-signal-orange">Loop.</span>
               </h1>
               <p className="mt-8 max-w-[42rem] text-pretty text-lg leading-8 text-cloud/95 sm:text-xl sm:leading-9">
-                CybrLoop helps product teams identify security risks, understand their real impact, prioritize what matters, and turn findings into actionable improvements in collaboration with developers.
+                CybrLoop is a cybersecurity team working to improve digital security through technical projects, research, knowledge sharing, and specialized security services.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-3">
-                <ActionLink href="#contact">Request a Security Assessment</ActionLink>
-                <ActionLink href="#approach" variant="secondary">Learn How We Work</ActionLink>
+                <ActionLink href="#workstreams">What We Do</ActionLink>
+                <ActionLink href="#contact" variant="secondary">Get in Touch</ActionLink>
               </div>
             </div>
 
@@ -98,27 +85,26 @@ export default function Home() {
 
         <section id="about" className="scroll-mt-24 border-b border-slate/60 pb-24 pt-20 sm:py-32 lg:pb-32 lg:pt-24">
           <SectionContainer className="grid gap-12 lg:grid-cols-[minmax(14rem,.7fr)_minmax(0,1.3fr)] lg:gap-20">
-            <SectionHeading label="01 / Who We Are" title="Security expertise that works with your team." />
+            <SectionHeading label="01 / Who We Are" title="Security expertise built through collaboration." />
             <div className="max-w-[44rem] space-y-6 text-lg leading-8 text-cloud/95 sm:text-xl sm:leading-9">
-              <p className="text-white">CybrLoop is a cybersecurity team focused on application security.</p>
-              <p>We work with startups and growing companies to identify security risks, understand their real impact, and turn findings into actionable improvements together with development teams.</p>
-              <p>Our goal is not simply to produce vulnerability reports. We want security findings to become understandable technical decisions that teams can actually act on.</p>
+              <p className="text-white">CybrLoop brings together people with different technical backgrounds to work on cybersecurity projects, research, and initiatives.</p>
+              <p>We believe that sharing knowledge, building practical solutions, and working together can help improve security while developing the skills and experience of everyone involved.</p>
             </div>
           </SectionContainer>
         </section>
 
-        <section id="services" className="scroll-mt-24 bg-charcoal pb-24 pt-20 sm:py-32 lg:pb-32 lg:pt-24">
+        <section id="workstreams" className="scroll-mt-24 bg-charcoal pb-24 pt-20 sm:py-32 lg:pb-32 lg:pt-24">
           <SectionContainer>
             <div className="grid gap-10 lg:grid-cols-[minmax(0,.8fr)_minmax(0,1.2fr)] lg:items-end">
-              <SectionHeading label="02 / What We Do" title="Web Application Security" />
-              <p className="max-w-[40rem] text-[1.0625rem] leading-8 text-cloud/95 lg:justify-self-end">Security assessment of web applications and related APIs—focused on the risks that matter and the improvements your team can make.</p>
+              <SectionHeading label="02 / What We Do" title="Different areas. One direction." />
+              <p className="max-w-[40rem] text-[1.0625rem] leading-8 text-cloud/95 lg:justify-self-end">Our work covers four areas, each contributing to better cybersecurity through practical work, shared knowledge, and collaboration.</p>
             </div>
-            <div className="mt-16 grid border-l border-t border-slate/70 md:grid-cols-3">
-              {capabilities.map((capability) => (
-                <article key={capability.title} className="group border-b border-r border-slate/70 p-6 transition-colors duration-300 hover:bg-deep-black/30 sm:min-h-64 sm:p-8">
-                  <span className="font-mono text-xs tracking-[0.18em] text-signal-orange">{capability.index}</span>
-                  <h3 className="mt-10 text-2xl font-medium tracking-[-0.03em] text-white sm:mt-14">{capability.title}</h3>
-                  <p className="mt-4 text-[1.0625rem] leading-7 text-cloud/95">{capability.description}</p>
+            <div className="mt-16 grid border-l border-t border-slate/70 md:grid-cols-2">
+              {workstreams.map((workstream) => (
+                <article key={workstream.title} className="group border-b border-r border-slate/70 p-6 transition-colors duration-300 hover:bg-deep-black/30 sm:min-h-64 sm:p-8">
+                  <span className="font-mono text-xs tracking-[0.18em] text-signal-orange">{workstream.index}</span>
+                  <h3 className="mt-10 text-2xl font-medium tracking-[-0.03em] text-white sm:mt-14">{workstream.title}</h3>
+                  <p className="mt-4 text-[1.0625rem] leading-7 text-cloud/95">{workstream.description}</p>
                 </article>
               ))}
             </div>
@@ -127,57 +113,14 @@ export default function Home() {
 
         <section id="approach" className="scroll-mt-24 border-y border-slate/60 pb-24 pt-20 sm:py-32 lg:pb-32 lg:pt-24">
           <SectionContainer>
-            <SectionHeading label="03 / How We Work" title="A structured path from context to improvement."  />
-            <ol className="mt-16 grid gap-0 lg:grid-cols-5">
+            <SectionHeading label="03 / Our Approach" title="From ideas to meaningful contributions." />
+            <ul className="mt-16 grid gap-0 lg:grid-cols-5">
               {approach.map((step, index) => (
                 <li key={step.title} className="relative border-l border-slate/70 py-8 pl-10 pr-5 lg:border-l-0 lg:border-t lg:px-4 lg:pb-0 lg:pt-10">
                   <span className="absolute left-[-0.3125rem] top-8 size-2.5 bg-signal-orange lg:left-4 lg:top-[-0.3125rem]" />
                   <span className="font-mono text-xs tracking-[0.16em] text-cloud/70">{String(index + 1).padStart(2, "0")}</span>
                   <h3 className="mt-3 text-xl font-medium text-white">{step.title}</h3>
                   <p className="mt-3 text-base leading-6 text-cloud/90 sm:text-[0.9375rem]">{step.description}</p>
-                </li>
-              ))}
-            </ol>
-          </SectionContainer>
-        </section>
-
-        <section className="relative overflow-hidden bg-charcoal pb-24 pt-20 sm:py-32 lg:pb-32 lg:pt-24">
-          <div className="service-grid absolute inset-0 opacity-40" aria-hidden="true" />
-          <SectionContainer className="relative z-10 grid gap-14 sm:gap-16 lg:grid-cols-[minmax(0,1.05fr)_minmax(22rem,.95fr)] lg:gap-24">
-            <div>
-              <SectionHeading label="Primary Service" title="Web Application Security Assessment" />
-              <div className="mt-8 max-w-2xl space-y-5 text-lg leading-8 text-cloud/95">
-                <p>A structured security assessment designed to identify weaknesses across your application, APIs, authentication flows, authorization boundaries, business logic, and other security-sensitive functionality.</p>
-                <p>We combine technical testing with contextual risk analysis so your team understands what matters, why it matters, and what to do next.</p>
-              </div>
-              <div className="mt-10"><ActionLink href="#contact">Discuss an Assessment</ActionLink></div>
-            </div>
-            <div>
-              <TechnicalLabel>Assessment outcomes</TechnicalLabel>
-              <ul className="mt-6 border-t border-slate/70">
-                {deliverables.map((deliverable, index) => (
-                  <li key={deliverable} className="flex items-start gap-4 border-b border-slate/70 py-4 text-[1.0625rem] leading-7 text-cloud/95">
-                    <span className="mt-2 size-1.5 shrink-0 bg-signal-orange" aria-hidden="true" />
-                    <span>{deliverable}</span>
-                    <span className="ml-auto font-mono text-[0.6875rem] text-cloud/50">{String(index + 1).padStart(2, "0")}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </SectionContainer>
-        </section>
-
-        <section id="research" className="scroll-mt-24 border-y border-slate/60 pb-24 pt-20 sm:py-32 lg:pb-32 lg:pt-24">
-          <SectionContainer>
-            <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
-              <SectionHeading label="04 / Research & Community" title="Security knowledge should circulate." />
-              <p className="max-w-2xl text-lg leading-8 text-cloud/95 lg:pt-8">Alongside client work, CybrLoop participates in the cybersecurity community through technical research, tools, content, talks, experiments, and competitions.</p>
-            </div>
-            <ul className="mt-16 grid border-l border-t border-slate/70 sm:grid-cols-2 lg:grid-cols-3">
-              {communityAreas.map((area, index) => (
-                <li key={area} className="flex min-h-24 items-end justify-between border-b border-r border-slate/70 p-5 sm:min-h-28">
-                  <span className="text-lg font-medium text-white">{area}</span>
-                  <span className="font-mono text-[0.625rem] tracking-widest text-signal-orange">{String(index + 1).padStart(2, "0")}</span>
                 </li>
               ))}
             </ul>
@@ -189,12 +132,29 @@ export default function Home() {
             <Image src="/assets/logo-mark-light.svg" alt="" fill sizes="34rem" className="object-contain" />
           </div>
           <SectionContainer className="relative z-10">
-            <TechnicalLabel>05 / Contact</TechnicalLabel>
-            <h2 className="mt-6 max-w-[58rem] text-balance text-[2.125rem] font-semibold leading-[1.08] tracking-[-0.045em] text-white min-[360px]:text-4xl sm:text-[3.5rem] sm:leading-[1.06] lg:text-[4rem]">Have an application you want assessed—or something security-related you&apos;d like to discuss?</h2>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-cloud/95 sm:text-xl">Let&apos;s talk. We&apos;ll start with your application, your context, and what your team needs to understand.</p>
-            <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center">
-              <ActionLink href="mailto:contact@cybrloop.com">Start a Conversation</ActionLink>
-              <a href="mailto:contact@cybrloop.com" className="link-underline inline-flex min-h-11 w-fit items-center text-lg text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-orange focus-visible:ring-offset-4 focus-visible:ring-offset-deep-black">contact@cybrloop.com</a>
+            <TechnicalLabel>04 / Contact</TechnicalLabel>
+            <h2 className="mt-6 max-w-[58rem] text-balance text-[2.125rem] font-semibold leading-[1.08] tracking-[-0.045em] text-white min-[360px]:text-4xl sm:text-[3.5rem] sm:leading-[1.06] lg:text-[4rem]">Let&apos;s talk about security.</h2>
+            <div className="mt-7 max-w-2xl space-y-4 text-lg leading-8 text-cloud/95 sm:text-xl">
+              <p>Whether you&apos;re building a product, running a business, working in cybersecurity, or exploring an idea, we&apos;re open to discussions and collaboration.</p>
+              <p>Tell us what you&apos;re working on or what you&apos;d like to discuss.</p>
+            </div>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <ActionLink href="https://wa.me/963982698204" target="_blank" rel="noopener noreferrer" icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-5">
+                  <path d="M20.5 11.5a8.5 8.5 0 0 1-12.8 7.3L3 20l1.3-4.7a8.5 8.5 0 1 1 16.2-3.8Z" />
+                  <path d="M8.2 8.1c-.4.4-.6 1-.4 1.6.8 2.8 3 5 5.8 5.8.6.2 1.2 0 1.6-.4l.5-.6-2.1-1.7-1 1a7.5 7.5 0 0 1-2.4-2.4l1-1-1.7-2.1-.6.5Z" />
+                </svg>
+              }>
+                WhatsApp<span className="sr-only"> (opens in a new tab)</span>
+              </ActionLink>
+              <ActionLink href="https://t.me/cybrloop" target="_blank" rel="noopener noreferrer" variant="secondary" icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="size-5">
+                  <path d="M21.5 3 2.8 10.5c-.9.4-.9 1.6.1 1.9l5.1 1.5 1.7 5.2c.3.9 1.5 1 2 .2l2.4-3.4 4.6 3.4c.7.5 1.6.1 1.8-.8L23 4.4c.2-1-.6-1.7-1.5-1.4Z" />
+                  <path d="m8 13.9 11-7.7-9.3 12.9" />
+                </svg>
+              }>
+                Telegram<span className="sr-only"> (opens in a new tab)</span>
+              </ActionLink>
             </div>
           </SectionContainer>
         </section>

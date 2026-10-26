@@ -23,15 +23,19 @@ export function SectionHeading({ label, title, description }: { label: string; t
   );
 }
 
-export function ActionLink({ children, href, variant = "primary" }: { children: ReactNode; href: string; variant?: "primary" | "secondary" }) {
+export function ActionLink({ children, href, variant = "primary", target, rel, icon }: { children: ReactNode; href: string; variant?: "primary" | "secondary"; target?: "_blank"; rel?: string; icon?: ReactNode }) {
   const styles = variant === "primary"
     ? "border-signal-orange bg-signal-orange text-deep-black hover:border-white hover:bg-white"
     : "border-slate/90 bg-transparent text-white hover:border-cloud hover:bg-charcoal";
+  const layout = icon
+    ? "grid grid-cols-[1.25rem_minmax(0,1fr)_1.25rem] items-center gap-3 sm:w-52"
+    : "inline-flex items-center justify-center gap-4 min-[360px]:gap-6 sm:w-auto";
 
   return (
-    <a href={href} className={`group inline-flex min-h-12 w-full items-center justify-center gap-4 border px-4 py-3 text-center text-sm font-semibold tracking-[-0.01em] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-orange focus-visible:ring-offset-4 focus-visible:ring-offset-deep-black min-[360px]:gap-6 min-[360px]:px-6 min-[360px]:text-[0.9375rem] sm:w-auto ${styles}`}>
+    <a href={href} target={target} rel={rel} className={`group min-h-12 w-full border px-4 py-3 text-center text-sm font-semibold tracking-[-0.01em] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-orange focus-visible:ring-offset-4 focus-visible:ring-offset-deep-black min-[360px]:px-6 min-[360px]:text-[0.9375rem] ${layout} ${styles}`}>
+      {icon ? <span className="flex size-5 items-center justify-center" aria-hidden="true">{icon}</span> : null}
       <span>{children}</span>
-      <span className="transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">→</span>
+      <span className={`${icon ? "justify-self-end" : ""} transition-transform duration-200 group-hover:translate-x-1`} aria-hidden="true">→</span>
     </a>
   );
 }

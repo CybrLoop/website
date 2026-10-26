@@ -2,13 +2,13 @@
 
 ## 1. Brand Identity (هوية العلامة)
 
-CybrLoop is a cybersecurity team focused initially on application security.
+CybrLoop is a cybersecurity team bringing together enthusiasts and professionals to collaborate, develop expertise, share knowledge, and strengthen digital security.
 
 Current category descriptor:
 
-> Application Security for Product Teams.
+> Cybersecurity team.
 
-CybrLoop starts with application security and is intended to grow into a broader cybersecurity services company as real team capabilities are developed.
+CybrLoop's four equally important strategic directions are Services, Research & Projects, Community & Education, and Competitions & Challenges. These are areas of interest, not necessarily active offerings or established departments. Do not present specialized services as an available offer.
 
 The brand should communicate:
 
@@ -35,19 +35,9 @@ Official slogan:
 
 > Secure the Loop.
 
-Primary positioning message:
+Approved public description:
 
-> Making security actionable, understandable, and collaborative.
-
-Supporting positioning statement:
-
-> We help product teams understand, act on, and improve security — not just find vulnerabilities.
-
-Short marketing message:
-
-> Making security actionable.
-
-This short message may be used selectively as a marketing headline, but it is not the official slogan.
+> CybrLoop is a cybersecurity team working to improve digital security through technical projects, research, knowledge sharing, and specialized security services.
 
 ---
 
@@ -376,7 +366,7 @@ Writing should be:
 
 Prefer:
 
-> We identify security risks and help your team understand what to do next.
+> We explore security problems, share what we learn, and work with others on useful solutions.
 
 Avoid:
 
@@ -412,35 +402,20 @@ Secure the Loop.
 
 ### Descriptor
 
-Application Security for Product Teams.
+Cybersecurity team.
 
 ### Positioning message
 
-Making security actionable, understandable, and collaborative.
+CybrLoop is a cybersecurity team working to improve digital security through technical projects, research, knowledge sharing, and specialized security services.
 
-When developing supporting public CybrLoop material, prioritize:
+Represent these four strategic directions with equal importance:
 
-### 1. Problem
+1. Services — Specialized security services focused on helping organizations identify risks, understand their impact, and improve security.
+2. Research & Projects — Researching security problems, developing tools, and working on technical projects that offer practical value.
+3. Community & Education — Sharing knowledge through talks, workshops, technical content, and collaboration with the cybersecurity community.
+4. Competitions & Challenges — Participating in CTFs and technical challenges to build practical skills, exchange experience, and explore new approaches.
 
-Product teams need security expertise that integrates with development.
-
-### 2. Approach
-
-Understand → Assess → Prioritize → Collaborate → Improve.
-
-### 3. Outcome
-
-Clear security findings that teams can act on.
-
-### 4. Capability
-
-Application security assessment.
-
-### 5. Community
-
-Research, tools, talks, projects, and competitions.
-
-Do not lead with a large list of security services.
+Do not present these directions as established departments or active offerings without evidence.
 
 ---
 
@@ -491,8 +466,9 @@ Current public assets include:
 - `assets/favicon.svg`
 - `assets/icon-512.png`
 - `assets/cybrloop-linkedin-banner.png`
-- `assets/cybrloop-og-image.png`
 
 Use the official SVG logo assets whenever they are available. Never use generated or recreated logos in their place.
+
+The website's current social preview is generated in `app/opengraph-image.tsx` with the official raster icon. The older `assets/cybrloop-og-image.png` and `assets/cybrloop-linkedin-banner.png` contain retired service-first messaging and should be updated before reuse.
 
 Future assets should remain consistent with this system.

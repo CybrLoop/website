@@ -60,34 +60,12 @@ button {
   mask-image: linear-gradient(to bottom, black 20%, rgb(0 0 0 / 0.72) 68%, transparent 100%);
 }
 
-.service-grid {
-  background-image:
-    linear-gradient(to right, rgb(58 58 64 / 0.3) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(58 58 64 / 0.22) 1px, transparent 1px);
-  background-position: center;
-  background-size: 6rem 6rem;
-  mask-image: linear-gradient(100deg, transparent, black 55%, transparent);
-}
-
 .marker-grid {
   width: 4.5rem;
   height: 3rem;
   opacity: 0.45;
   background-image: radial-gradient(circle, var(--cloud) 1.5px, transparent 1.6px);
   background-size: 0.75rem 0.75rem;
-}
-
-.link-underline {
-  background-image: linear-gradient(var(--signal-orange), var(--signal-orange));
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  background-size: 2rem 1px;
-  padding-bottom: 0.35rem;
-  transition: background-size 200ms ease;
-}
-
-.link-underline:hover {
-  background-size: 100% 1px;
 }
 
 @keyframes hero-enter {

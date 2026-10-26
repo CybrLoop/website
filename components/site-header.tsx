@@ -3,9 +3,8 @@ import { MobileNav } from "@/components/mobile-nav";
 
 const navigationItems = [
   { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
+  { href: "#workstreams", label: "What We Do" },
   { href: "#approach", label: "Approach" },
-  { href: "#research", label: "Research" },
   { href: "#contact", label: "Contact" },
 ] as const;
 

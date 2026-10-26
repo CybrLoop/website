@@ -13,11 +13,12 @@ export function SiteFooter() {
           <a href="#main-content" aria-label="CybrLoop home" className="relative block h-11 w-[9.75rem] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-orange sm:h-9">
             <Image src="/assets/logo-full-light.svg" alt="CybrLoop" fill sizes="156px" className="object-contain object-left py-1 sm:py-0" />
           </a>
-          <p className="mt-5 max-w-sm text-sm leading-6 text-cloud/90">Application Security for Product Teams.</p>
+          <p className="mt-5 max-w-sm text-sm leading-6 text-cloud/90">CybrLoop is a cybersecurity team working to improve digital security through technical projects, research, knowledge sharing, and specialized security services.</p>
         </div>
         <div className="space-y-4 md:text-right">
           <div className="flex flex-wrap gap-x-6 gap-y-3 text-[0.9375rem] text-cloud md:justify-end md:gap-y-2 md:text-sm">
-            <a className="inline-flex min-h-10 items-center transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-orange focus-visible:ring-offset-4 focus-visible:ring-offset-charcoal md:min-h-0" href="mailto:contact@cybrloop.com">contact@cybrloop.com</a>
+            <a className="inline-flex min-h-10 items-center transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-orange focus-visible:ring-offset-4 focus-visible:ring-offset-charcoal md:min-h-0" href="https://wa.me/963982698204" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a className="inline-flex min-h-10 items-center transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-orange focus-visible:ring-offset-4 focus-visible:ring-offset-charcoal md:min-h-0" href="https://t.me/cybrloop" target="_blank" rel="noopener noreferrer">Telegram</a>
             {socialLinks.map((link) => (
               <a key={link.label} className="inline-flex min-h-10 items-center transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-signal-orange focus-visible:ring-offset-4 focus-visible:ring-offset-charcoal md:min-h-0" href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
             ))}
